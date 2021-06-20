@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 
 export const StyleForm = styled.form`
+    background-color: #111;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,6 +23,7 @@ export const InputText = styled.input`
 `;
 
 export const Title = styled.h1`
+
     align-items: center;
     display: flex;
     justify-content: center;
