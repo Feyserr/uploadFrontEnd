@@ -12,10 +12,10 @@ export default function App(){
     <BrowserRouter >
       <Menu/>
       <Switch>
-      <Route exact path="/" component={Home} />
-      <Route  path="/ListarFuncionarios" component={ListaFuncionarios} />
-      <Route  path="/EditarFuncionarios/:id" component={editarFuncionarios} />
-      <Route render={() => <Redirect to="/" />} />
+        <Route exact path="/" component={Home} />
+        <Route  path="/ListarFuncionarios" component={ListaFuncionarios} />
+        <Route  path="/EditarFuncionarios/:id" component={editarFuncionarios} />
+        <Route render={() => <Redirect to="/" />} />
       
       </Switch>
     

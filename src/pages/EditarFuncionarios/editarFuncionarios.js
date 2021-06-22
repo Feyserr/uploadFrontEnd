@@ -29,7 +29,7 @@ function EditarFuncionarios() {
       { nome, cpf, funcao, regime, email, telefone1, telefone2, cnpj },  
         {headers:{  
             "Access-Control-Allow-Origin": "*"}},);
-            alert('Funcionario editado com sucesso !');
+             alert('Funcionario editado com sucesso !');
       
     } catch (error) {
       console.log(error);
@@ -65,9 +65,7 @@ function EditarFuncionarios() {
   return (
     
     <div>
-      
       <Title>Edição de Funcionários</Title>
-
       <div>
         <StyleForm onSubmit={handleSubmit}>
           <InputText value={nome} type="text" placeholder="Digite um nome " name="nome" onChange={(e) => {
@@ -94,7 +92,6 @@ function EditarFuncionarios() {
           <InputText value ={cnpj} type="text" placeholder="Digite o cnpj" name="cnpj" onChange={(e) => {
             setCnpj(e.target.value)
           }} />
-
           <Button label={"Editar"} type="submit"></Button>
         </StyleForm>
       </div>

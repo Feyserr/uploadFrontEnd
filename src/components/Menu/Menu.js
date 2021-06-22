@@ -6,8 +6,6 @@ import { useHistory } from 'react-router';
 export default function Menu(){
     const [isOpen, setIsOpen] = useState(false);
 
- 
-
     const history = useHistory();
 
     const handleClick = (route) => {

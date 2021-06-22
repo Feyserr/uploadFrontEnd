@@ -29,8 +29,12 @@ import {StyleForm} from '../../styles';
 
 function getFuncionariosCpf(){
     setLoading(true)
-      axios.get(`http://uploadbackendfuncionarios.herokuapp.com/funcionarios/cpf/${cpf}`).then((response)=>{
-        setFuncionariosList(response.data.rows);
+      axios.get(`http://uploadbackendfuncionarios.herokuapp.com/funcionarios/cpf/${cpf}`, 
+      {headers:{  
+        "Access-Control-Allow-Origin": "*"}})
+        .then((response)=>{
+        
+      setFuncionariosList(response.data.rows);
         setLoading(false)
   })
   .catch((error) => {
