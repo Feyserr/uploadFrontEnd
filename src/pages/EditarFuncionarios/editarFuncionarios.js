@@ -7,10 +7,6 @@ import { useParams } from "react-router-dom";
 
 function EditarFuncionarios() {
 
-
-
-   
-  
   const [nome, setNome] = useState("");
   const [cpf, setCpf] = useState("");
   const [funcao, setFuncao] = useState("");
@@ -33,9 +29,7 @@ function EditarFuncionarios() {
       { nome, cpf, funcao, regime, email, telefone1, telefone2, cnpj },  
         {headers:{  
             "Access-Control-Allow-Origin": "*"}},);
-        
-      alert('Funcionario editado com sucesso !');
-
+            alert('Funcionario editado com sucesso !');
       
     } catch (error) {
       console.log(error);
@@ -55,7 +49,6 @@ function EditarFuncionarios() {
             setTelefone2(response.data.rows[0].telefone2);
             setCnpj(response.data.rows[0].cnpj);
           }
-
 
       setLoading(false);
       })
