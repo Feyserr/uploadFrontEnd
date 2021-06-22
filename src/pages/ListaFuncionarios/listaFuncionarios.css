@@ -1,0 +1,16 @@
+.separacao {
+  margin-left: 50px;
+}
+
+.ButtonStyle {
+  margin-left: 100px;
+}
+.styleCampo {
+  display: flex;
+  color: #6a5acd;
+}
+
+.styleInput {
+  margin-bottom: 20px;
+  display: flex;
+}

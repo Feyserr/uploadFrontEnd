@@ -6,6 +6,7 @@ export const StyleButton = styled.button`
     border-radius: 10px;
     color: #fff;
     background-color: #1E90FF;
+    
 
 
 `;

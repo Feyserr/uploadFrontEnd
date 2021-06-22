@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import { NavLink } from 'react-router-dom';
 import './Menu.css';
 import { useHistory } from 'react-router';
 
@@ -11,8 +10,8 @@ export default function Menu(){
 
     const history = useHistory();
 
-    const handleClick = () => {
-        history.push("/ListarFuncionarios");
+    const handleClick = (route) => {
+        history.push(route);
     }
 
     return (
@@ -32,18 +31,15 @@ export default function Menu(){
             </button>
             <div className={`${isOpen ? 'show' : ''} collapse navbar-collapse`} id ="navbar01">
                 <ul className="navbar-nav mr-auto">
-                    <li className ="nav-item">
-                        <button to ="/" className="nav-link" onClick={handleClick}>Home</button>
+                    <p className ="nav-item">
+                        <button to ="/" className="nav-link" onClick={()=>handleClick("/")}>Home</button>
 
-                    </li>
-                    <li className ="nav-item">
-                        <button to ="/ListarFuncionarios" className="nav-link" onClick={handleClick}>Lista</button>
+                    </p>
+                    <p className ="nav-item2">
+                        <button to ="/ListarFuncionarios" className="nav-link" onClick={()=>handleClick("/ListarFuncionarios")}>Lista</button>
 
-                    </li>
-                    <li className ="nav-item">
-                        <button to ="/EditarFuncionarios" className="nav-link" onClick={handleClick}>Editar</button>
-
-                    </li>
+                    </p>
+                   
 
                 </ul>
 

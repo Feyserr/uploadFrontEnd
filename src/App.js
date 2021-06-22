@@ -3,7 +3,7 @@ import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import Menu from './components/Menu/Menu';
 import editarFuncionarios from './pages/EditarFuncionarios/editarFuncionarios';
 import Home from './pages/Home/index';
-import listaFuncionarios from './pages/ListaFuncionarios/listaFuncionarios';
+import ListaFuncionarios from './pages/ListaFuncionarios/listaFuncionarios';
 import './App.css';
 
 
@@ -12,10 +12,10 @@ export default function App(){
     <BrowserRouter >
       <Menu/>
       <Switch>
-      <Route exacth path="/" component={Home} />
+      <Route exact path="/" component={Home} />
+      <Route  path="/ListarFuncionarios" component={ListaFuncionarios} />
+      <Route  path="/EditarFuncionarios/:id" component={editarFuncionarios} />
       <Route render={() => <Redirect to="/" />} />
-      <Route  path="/ListarFuncionarios" component={listaFuncionarios} />
-      <Route  path="/EditarFuncionarios" component={editarFuncionarios} />
       
       </Switch>
     
